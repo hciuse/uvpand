@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/src/lib/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/src/lib/css/tabler-icons.min.css">
+  <link rel="stylesheet" href="/src/lib/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="/uvpand.svg" />
+  <title>Experiment</title>
+</head>
+
+<body class="m0">
+  <header class="page-header">
+    <h1 class="m0">Studie UVPand</h1>
+    <div>
+      <a href="https://www.imis.uni-luebeck.de/de/impressum" target="_blank" rel=”noopener”>Impressum</a>
+      <a href="https://www.imis.uni-luebeck.de/de/datenschutz" target="_blank" rel=”noopener”>Datenschutz</a>
+    </div>
+  </header>
+  <main>
+    <!-- Szenario Explanation -->
+    <div id="InfoTextSzenario">
+      <div>
+        Herzlich Willkommen in der UV-Pand-Anwendung. <br />
+        Dies ist Ihr Code: <span id="user-id"></span>
+      </div>
+    </div>
+    <div>
+      Szenario: <b>neuartige Grippe Epidemie</b>
+    </div>
+    <div>
+      Die folgenden Informationen sind das ganze Experiment über für Sie verfügbar.
+    </div>
+    <div>
+      Über die Grippe:
+      <ul class="flue-info">
+        <li>
+          <b>neuartige Grippe</b> mit schweren Verlauf
+        </li>
+        <li>schnelle Ausbreitung <i class="ti ti-arrow-right implication"></i> <b>Epidemie</b></li>
+        <li>bestehende Medikamente und Impfungen helfen kaum</li>
+        <li>Übertragung über <b>kleine Tröpfchen</b> und <b>Aerosole</b></li>
+        <li>verursacht typische Grippe-Symptome</li>
+        <li>Beschwerden 7 – 10 Tage, ansteckend potentiell davor</li>
+        <li>höheres Risiko für schwere Verläufe bei Senioren, Schwangeren und chronisch kranken Menschen</li>
+        <li>etwa 30 von 100 Erkrankten müssen ins Krankenhaus</li>
+        <li>etwa 2 von 100 Erkrankten sterben</li>
+      </ul>
+    </div>
+    <div>
+      Über die Maßnahmen:
+      <ul class="flue-info">
+        <li>Bundesregierung möchte allgemeine <b>Maßnahmen</b> zum Gesundheitsschutz einführen</li>
+        <li>Laufzeit: zunächst maximal drei Monate</li>
+        <li>mögliche Maßnahmen: <ul>
+            <li>
+              Schließung von Geschäften und Betrieben
+            </li>
+            <li>Umstellung auf Distanzunterricht in Schulen und Universitäten</li>
+            <li>
+              Verbot von Treffen mit mehr als 5 Personen
+            </li>
+          </ul>
+        </li>
+
+        <li>strengere Maßnahmen üblicherweise wirksamer, aber auch stärker Auswirkungen auf
+          Alltag der Menschen</li>
+      </ul>
+    </div>
+    <div>
+      Sie sind <b>eingeladen</b>, am <b>Entscheidungsprozess</b> über die Maßnahmen teilzunehmen.
+    </div>
+    <!-- Btn for Next Szenario -->
+    <div class="startDiv flex">
+      <button id="startBtn">Start</button>
+    </div>
+    </div>
+  </main>
+</body>
+
+<script type="module" src="/src/main.js"></script>

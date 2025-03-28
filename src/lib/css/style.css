@@ -1,0 +1,418 @@
+/* . Framenavigation*/
+.frameControll {
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  margin-top: 5px;
+  visibility: hidden;
+  margin-bottom: 10px;
+}
+
+.frameControll button {
+  margin-right: 1%;
+  padding: 8px;
+  width: max-content;
+  height: fit-content;
+}
+
+button {
+  background: lightsteelblue;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.25);
+  width: 100px;
+  height: 25px;
+}
+
+button:hover {
+  background-color: rgb(158, 183, 214);
+}
+
+.frameControll p {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.fa {
+  font-size: 16px;
+}
+
+/* . Slider & Progress */
+.sliderDiv {
+  visibility: hidden;
+  margin-top: 10px;
+}
+
+.slider {
+  height: 5px;
+  background: lightgray;
+  position: relative;
+  width: 100%;
+}
+
+.slider .progress {
+  height: 5px;
+  position: absolute;
+  background: lightsteelblue;
+}
+
+/* . Range Input */
+.range-input {
+  position: relative;
+}
+
+.range-input input {
+  position: absolute;
+  top: -5px;
+  height: 5px;
+  width: 100%;
+  background: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  pointer-events: none;
+}
+
+#maxTag {
+  bottom: 30px;
+}
+
+.value-tag,
+input[type="range"]::-webkit-slider-thumb {
+  height: 20px;
+  width: 45px;
+  border-radius: 10%;
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 20px;
+  width: 45px;
+  border-radius: 10%;
+}
+
+.value-tag {
+  position: relative;
+  display: block;
+  background-color: steelblue;
+  text-align: center;
+  bottom: 10px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  pointer-events: auto;
+}
+
+input[type="range"]::-moz-range-thumb {
+  -moz-appearance: none;
+  pointer-events: auto;
+  /* display: none; */
+  background-color: rgba(0, 0, 0, 0);
+  border: 0px solid black;
+}
+
+span {
+  font-size: small;
+}
+
+/* . Vertical Line*/
+.vlines {
+  border-right: 2px solid gray;
+  bottom: 40px;
+  position: absolute;
+}
+
+.xaxis line,
+.yaxis line {
+  stroke: black;
+}
+.axis-grid line {
+  stroke: rgba(0, 0, 0, 0.25);
+}
+
+/* . Checkboxes & Radiobuttons*/
+.containerHalf {
+  flex-direction: column;
+  margin-bottom: 20px;
+  margin-right: 1em;
+}
+
+.containerHalf h2 {
+  margin-bottom: 0.5em;
+}
+.containerHalf h3 {
+  margin: 0;
+  font-weight: lighter;
+}
+
+.legend {
+  max-width: 50px;
+  max-height: 20px;
+}
+
+.legend > line {
+  stroke-width: 2;
+}
+
+#graphCheckboxes > label:last-child > .legend > line {
+  stroke-width: 1;
+}
+
+label {
+  margin-top: 8px;
+  min-width: 200px;
+  max-width: 50%;
+  display: inline-block;
+}
+
+label.radio {
+  display: flex;
+  align-items: center;
+}
+
+label.radio i {
+  margin: 0.2em;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: steelblue;
+}
+
+#radiobuttons p {
+  margin-left: 2em;
+  margin-top: 0;
+}
+
+#interventionIcons div {
+  display: flex;
+  align-items: center;
+}
+
+.ti {
+  color: steelblue;
+  font-size: xx-large;
+}
+
+#interventionIcons i {
+  margin-right: 0.5em;
+}
+
+h2 .fa {
+  font-size: large;
+}
+
+h2 > i:hover {
+  transform: scale(1.25);
+}
+
+/* . Layout */
+#modelField {
+  flex-direction: column-reverse;
+  /* display: none; */
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  padding: 1vh 1vw;
+  padding-top: 80px;
+  background: snow;
+  min-height: calc(91vh - 52.5px);
+}
+
+.container {
+  justify-content: flex-start;
+}
+
+header,
+footer {
+  background: steelblue;
+  padding: 14px;
+  z-index: 15;
+}
+
+footer a {
+  text-decoration-line: none;
+  color: black;
+  margin-right: 1em;
+}
+
+footer a:hover {
+  text-decoration-line: underline;
+}
+
+header {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
+  position: fixed;
+  width: 100%;
+}
+
+header a {
+  color: white;
+  text-decoration-line: none;
+  margin-right: 2rem;
+}
+
+header a:hover {
+  text-decoration-line: underline;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* . Utility */
+.flex {
+  display: flex;
+}
+
+.m0 {
+  margin: 0;
+}
+
+hr {
+  width: 100%;
+}
+
+/* . Szenario buttons */
+.startDiv {
+  width: 100%;
+  justify-content: end;
+}
+
+/* . Accordion */
+.accordion {
+  background-color: lightsteelblue;
+  color: black;
+  cursor: pointer;
+  margin: 10px 0;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-weight: bold;
+  font-size: large;
+}
+
+.active,
+.accordion:hover {
+  background-color: rgb(158, 183, 214);
+  transform: scale(1);
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  font-size: medium;
+  text-align: justify;
+}
+
+.accordion:after {
+  /* Unicode character for "plus" sign (+) */
+  content: "\02795";
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.accordion.active:after {
+  /* Unicode character for "minus" sign (-) */
+  content: "\2796";
+}
+
+/* . Tabs */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+.tab button {
+  float: left;
+  cursor: pointer;
+  padding: 16px 20px 16px 14px;
+  transition: 0.3s;
+}
+
+.tab button:hover {
+  transform: scale(1);
+}
+
+.tabcontent {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.tablinks {
+  min-width: fit-content;
+}
+
+/* . StartPage */
+#InfoTextSzenario,
+#InfotextVis {
+  text-align: justify;
+}
+
+/* . Dialog */
+dialog {
+  border: 3px solid steelblue;
+  position: absolute;
+  left: 50;
+}
+dialog div {
+  flex-direction: column;
+}
+dialog div button {
+  align-self: end;
+}
+
+/* .Tutorial */
+.dialogContainer {
+  width: 50%;
+  position: absolute;
+  top: 55%;
+  left: 10em;
+  align-self: end;
+}
+
+#user-id {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+::backdrop {
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 1;
+}
+
+#showEpiInfoBtn {
+  width: 10%;
+  margin-top: 0.25rem;
+}
+
+#showEpiInfoBtn:hover {
+  cursor: pointer;
+}
+
+#closeEpiInfoBtn {
+  width: 10%;
+  margin-top: 0.25rem;
+}
+
+#closeEpiInfoBtn:hover {
+  cursor: pointer;
+}
+
+.implication {
+  font-size: 1.25rem;
+}

@@ -1,0 +1,13 @@
+name: uvpand-demo
+services:
+  frontend:
+    container_name: uvpand-demo-frontend
+    restart: always
+    build:
+      context: ./
+    networks:
+      proxy:
+
+networks:
+  proxy:
+    external: true
