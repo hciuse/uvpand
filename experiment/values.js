@@ -213,7 +213,7 @@ const intervention = {
 };
 
 // . Axis Label Infos
-const months = ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"];
+const months = ["Jan", "Feb", "March", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dez"];
 const yAxisMax = 2500000;
 const yAxisInterval = 1000000; // Y axis Tik-intervall
 

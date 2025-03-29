@@ -213,7 +213,7 @@ const intervention = {
 };
 
 // . Axis Label Infos
-const months = ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"];
+const months = ["Jan", "Feb", "March", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dez"];
 const yAxisMax = 2500000;
 const yAxisInterval = 1000000; // Y axis Tik-intervall
 
@@ -443,10 +443,10 @@ var deDE = d3.timeFormatLocale({
   date: "%d.%m.%Y",
   time: "%H:%M:%S",
   periods: ["AM", "PM"],
-  days: ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"],
-  shortDays: ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"],
-  months: ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"],
-  shortMonths: ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"],
+  days: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+  shortDays: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+  months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+  shortMonths: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
 });
 
 var xAxis = d3.axisBottom(x).ticks(d3.timeWeek.every(2)).tickFormat(deDE.format("%d. %b %y")).tickPadding(15);
@@ -470,7 +470,7 @@ svg
   .attr("text-anchor", "end")
   .attr("x", width + margin.right)
   .attr("y", height + margin.bottom)
-  .text("Zeit");
+  .text("Time");
 
 svg
   .append("text") //Label
@@ -479,7 +479,7 @@ svg
   .attr("y", 275)
   .attr("fill", graphHsp.color)
   .attr("font-weight", "bold")
-  .text("Verfügbare Krankenhausbetten");
+  .text("Available Hospital Beds");
 
 // . YAxis
 var y = d3
@@ -507,7 +507,7 @@ svg
   .attr("transform", "rotate(0)")
   .attr("y", 15)
   .attr("x", 0)
-  .text("Krankenhausbetten");
+  .text("Hospital Beds");
 
 //. Hospital Beds Line
 svg
@@ -1446,7 +1446,7 @@ async function explainGraph() {
   dialogContainer.style.top = "50%";
   modelField.style.boxShadow = "0 0 0 99999px rgba(0, 0, 0, .5)";
   tutorialText.innerHTML =
-    "Hier sehen Sie den vorhergesagten Verlauf der Epidemie. Auf der X-Achse sehen Sie den zeitlichen Verlauf. Auf der Y-Achse sehen Sie die Anzahl verfügbarer und belegter Krankenhausbetten";
+    "Here you can see the predicted course of the epidemic. The x-axis shows the timeline. The y-axis shows the number of available and occupied hospital beds";
   tutorial.show();
 }
 
@@ -1456,7 +1456,7 @@ function explainIntervention() {
   dialogContainer.style.top = "40%";
   modelField.style.boxShadow = "0 0 0 99999px rgba(0, 0, 0, .5)";
   tutorialText.innerHTML =
-    "Wenn Sie eine Maßnahme oder Kombinationen ausgewählt haben, können Sie über diese beiden Schieberegler Start- und Endzeitpunkt festlegen. Die Auswirkung auf den Verlauf sehen Sie direkt im Graph.";
+    "Once you've selected a measure or combinations, you can use these two sliders to set the start and end time. You'll see the impact on the course directly in the graph.";
   tutorial.show();
 }
 
@@ -1465,7 +1465,7 @@ function explainSelection() {
   dialogContainer.style.top = "75%";
   selections.style.boxShadow = "0 0 0 99999px rgba(0, 0, 0, .5)";
   tutorialText.innerHTML =
-    "Hier finden Sie die Auswahl der möglichen Maßnahmen und Kombinationen. Links finden Sie die Erklärung welches Symbol für welche Maßnahme steht.";
+    "Here you'll find the selection of possible measures and combinations. On the left, you'll find an explanation of which symbol represents which measure.";
   tutorial.show();
 }
 
@@ -1473,7 +1473,7 @@ function explainHOP() {
   frameControll.scrollIntoView({ block: "center" });
   frameControll.style.boxShadow = "0 0 0 99999px rgba(0, 0, 0, .5)";
   tutorialText.innerHTML =
-    "Hier finden Sie die Steuerung für die HOP-Visualisierung. Mit dem Button in der Mitte können Sie die Animation starten und pausieren. Die Buttons rechts und links davon springen zum nächsten bzw. vorherigen Frame der Animation. Ganz rechts sehen Sie, welcher Frame aktuell angezeigt wird.";
+    "Here you'll find the controls for the HOP visualization. With the button in the middle, you can start and pause the animation. The buttons to the right and left of it jump to the next or previous frame of the animation. On the far right, you can see which frame is currently being displayed.";
   tutorial.show();
 }
 
@@ -1484,7 +1484,7 @@ function explainContinueButton() {
   nextScenarioInput.style.margin = "20px";
   nextScenarioInput.style.boxShadow = "0 0 0 99999px rgba(0, 0, 0, .5)";
   tutorialText.innerHTML =
-    "Wenn Sie Ihre Auswahl getroffen haben, geben Sie der Versuchsleitung ein Signal. Um zur nächsten Visualisierung zu gelangen, klicken Sie auf 'Weiter' unten links.";
+    "Once you've made your selection, signal the test supervisor. To proceed to the next visualization, click on 'Next' in the bottom left.";
   tutorial.show();
 }
 

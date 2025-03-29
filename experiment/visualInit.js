@@ -51,10 +51,10 @@ var deDE = d3.timeFormatLocale({
   date: "%d.%m.%Y",
   time: "%H:%M:%S",
   periods: ["AM", "PM"],
-  days: ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"],
-  shortDays: ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"],
-  months: ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"],
-  shortMonths: ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"],
+  days: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+  shortDays: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+  months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+  shortMonths: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
 });
 
 var xAxis = d3.axisBottom(x).ticks(d3.timeWeek.every(2)).tickFormat(deDE.format("%d. %b %y")).tickPadding(15);
@@ -78,7 +78,7 @@ svg
   .attr("text-anchor", "end")
   .attr("x", width + margin.right)
   .attr("y", height + margin.bottom)
-  .text("Zeit");
+  .text("Time");
 
 svg
   .append("text") //Label
@@ -87,7 +87,7 @@ svg
   .attr("y", 275)
   .attr("fill", graphHsp.color)
   .attr("font-weight", "bold")
-  .text("Verfügbare Krankenhausbetten");
+  .text("Available Hospital Beds");
 
 // . YAxis
 var y = d3
@@ -115,7 +115,7 @@ svg
   .attr("transform", "rotate(0)")
   .attr("y", 15)
   .attr("x", 0)
-  .text("Krankenhausbetten");
+  .text("Hospital Beds");
 
 //. Hospital Beds Line
 svg
